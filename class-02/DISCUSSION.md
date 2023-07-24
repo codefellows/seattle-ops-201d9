@@ -6,18 +6,10 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-Review the introductory sections for each link below.
+[What is Bash?](https://opensource.com/resources/what-bash){:target="_blank"}
 
-[GitHub](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github){:target="_blank"}
-
-<!-- Mix it up! Create the questions with pointed answers, fill in the blank, or opinion/open ended -->
-
-[VS Code](https://code.visualstudio.com/docs){:target="_blank"}
-
-<!-- Mix it up! Create the questions with pointed answers, fill in the blank, or opinion/open ended -->
-
-## Optional
-
-[Origins of Bash/Story of Shellshock](https://www.wired.com/2014/09/shellshocked-bash/){:target="_blank"}
-
-[Tutorialspoint - What is a Shell?](https://www.tutorialspoint.com/unix/unix-what-is-shell.htm){:target="_blank"}
+1. What is the primary function of a shell in a computer's operating system?
+1. How does Bash locate and execute commands on a Linux or Unix system?
+1. How can you determine if your system is running a Bash shell?
+1. What makes Bash scripting powerful and why is it considered scriptable?
+1. Bash scripting allows for customization, automation, and efficiency. Discuss methods or practices from your previous work experience or cultural background that aim to achieve similar goals in daily tasks.
