@@ -8,4 +8,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 [How to Use System Restore](https://www.lifewire.com/how-to-use-system-restore-in-windows-2626131){:target="_blank"}
 
-<!-- Mix it up! Create the questions with pointed answers, fill in the blank, or opinion/open ended -->
+1. What is the purpose of the Windows System Restore tool?
+1. How long does it usually take to use the System Restore tool in Windows?
+1. How do you start a System Restore from the command prompt?
+1. What options are available if System Restore did not fix the problem?
