@@ -92,3 +92,11 @@ Next class will focus on using industry standard development tools such as Git, 
     - Data Backups
 
 ## Notes
+
+1. How do I screenshot in Windows 10?
+  - PrtScn (Print Screen) Key: Press the "PrtScn" key on your keyboard. This will capture the entire screen and save the screenshot to the clipboard. You can then paste it into an image editing program (e.g., Paint, Microsoft Word) and save it as an image file.
+  - Windows Key + PrtScn: Press the "Windows" key and the "PrtScn" key simultaneously. This will capture the entire screen and automatically save the screenshot as an image file in the "Screenshots" folder located in your "Pictures" directory.
+  - Alt + PrtScn: Press the "Alt" key and the "PrtScn" key together to capture only the currently active window. The screenshot will be saved to the clipboard, and you can paste it into an image editing program to save it.
+  - Snipping Tool: Windows 10 also includes a built-in tool called "Snipping Tool" that allows you to capture custom screenshots. To use it, search for "Snipping Tool" in the Start menu, open the tool, click "New," and then select the area you want to capture. After capturing the screenshot, you can save it as an image file.
+  - Snip & Sketch (Windows Key + Shift + S): This is an improved version of the Snipping Tool. Press "Windows Key + Shift + S" to activate it. A small toolbar will appear at the top of the screen, offering options to capture a rectangular, free-form, window, or full-screen snip. Once you make the selection, the screenshot will be copied to the clipboard, and you can paste and save it as needed.
+  - Game Bar (for games and apps): If you're running a game or certain applications, you can use the Game Bar to take screenshots. Press "Windows Key + G" to open the Game Bar, and then click on the camera icon to take a screenshot.
