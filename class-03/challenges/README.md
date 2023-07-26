@@ -1,5 +1,8 @@
 # Ops Challenge - Functions 
 
+## Hexx's Demo from Lecture
+- [Demo Linked Here](https://github.com/HexxKing/ops_201_challenges/blob/main/login_history.sh)
+
 ## Overview
 
 In Bash, functions are blocks of reusable code that can be defined once and then called multiple times throughout a script or the command line. Functions provide a way to organize and modularize code, making scripts easier to read, maintain, and debug. They are similar to functions in other programming languages and follow a simple syntax.
