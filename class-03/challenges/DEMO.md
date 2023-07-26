@@ -13,8 +13,8 @@
 # Declaration of functions
 
 # Basic function
-print_something () {
-  echo Hello I am a function
+print_something() {
+  echo "Hello I am a function"
 }
 
 # Main
