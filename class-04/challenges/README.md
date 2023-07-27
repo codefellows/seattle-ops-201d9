@@ -1,5 +1,8 @@
 # Ops Challenge - Arrays
 
+## Hexx's Demo from Lecture
+- [Linked Here](https://github.com/HexxKing/ops_201_challenges/blob/main/snacks-array.sh)
+
 ## Overview
 
 In Bash, an array is a collection of multiple values (sometimes made of different data types) assigned to a single variable. Arrays provide a way to group related data elements together for easier manipulation and processing. In Bash, arrays are zero-indexed, which means the first element has an index of 0, the second element has an index of 1, and so on.
