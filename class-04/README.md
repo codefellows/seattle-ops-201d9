@@ -96,3 +96,47 @@ Next class you will work with Windows command line tools and learn how to intera
 - [How to Initialize an SSD in Windows 11/10?](https://recoverit.wondershare.com/partition-tips/initialize-a-hard-drive-in-windows-10.html)
 
 ## Notes
+
+### Diskpart
+
+#### Type the commands below, pressing Enter after every line. This will initialize the chosen disk to MBR or GPT.
+1. `list disk`
+    - The command `list disk` is used to display a list of all the disks connected to your computer, including physical hard drives and any virtual disks. When you enter this command in Diskpart, it will show you information about each disk, such as its disk number, size, and free space. The list of disks can be helpful to identify the disks you want to work with in subsequent commands.
+1. `select disk #`
+    - Replace `#` with the drive letter. The command `select disk #` is used to choose a specific disk from the list displayed using the `list disk` command. Replace `#` with the number corresponding to the disk you want to work with. This command is essential because many Diskpart commands require you to specify the disk you want to manage. Once you select a disk, any further actions in Diskpart will apply to that specific disk.
+1. `convert MBR/GPT`
+    - The command `convert MBR` or `convert GPT` is used to change the partition style of the selected disk. MBR stands for Master Boot Record, and GPT stands for GUID Partition Table, and they represent different partitioning schemes for the disk. Using the `convert` command, you can switch between MBR and GPT styles. However, it's important to note that converting the partition style will erase all data on the disk, so be sure to back up any important data before performing this operation.
+
+#### Type in the commands below on the command-line if you intend the primary partition to be made on MBR.
+1. `list disk`
+    - Displays a list of all the disks connected to your computer, including physical hard drives and virtual disks. The list will show information about each disk, such as its disk number, size, and free space.
+1. `select disk #`
+    - Allows you to choose a specific disk from the list displayed using the `list disk` command. Replace `#` with the number corresponding to the disk you want to work with. After selecting a disk, all subsequent actions in Diskpart will apply to the chosen disk.
+1. `clean`
+    - Removes all partition or volume information from the selected disk, effectively wiping it clean. This command erases all data on the disk, so be cautious when using it.
+1. `create partition primary`
+    - Creates a new primary partition on the selected disk. A primary partition is a basic partition that can be used to store data or install an operating system.
+1. `format quick fs=ntfs`
+    - Formats the newly created partition with the NTFS file system using a quick format. The `quick` parameter speeds up the formatting process by not checking for bad sectors. Replace `ntfs` with `fat32` or `exfat` if you prefer those file systems.
+1. `assign`
+    - Assigns the next available drive letter to the formatted partition, allowing you to access it through File Explorer.
+1. `exit`
+    - Exits the Diskpart command-line utility, returning you to the regular Command Prompt or terminal.
+> These commands, when used in sequence, allow you to prepare a disk, create a partition, format it with a file system, and assign a drive letter to make it usable for storing data or installing an operating system. Remember that some of these commands (like "clean") can result in data loss, so be sure to back up any important data before executing them.
+
+#### Type in the following commands if you want to make a primary partition on GPT.
+1. `list disk`
+    - Displays a list of all the disks connected to your computer, including physical hard drives and virtual disks. The list will show information about each disk, such as its disk number, size, and free space.
+1. `select disk #`
+    - Allows you to choose a specific disk from the list displayed using the `list disk` command. Replace `#` with the number corresponding to the disk you want to work with. After selecting a disk, all subsequent actions in Diskpart will apply to the chosen disk.
+1. `clean`
+    - Removes all partition or volume information from the selected disk, effectively wiping it clean. This command erases all data on the disk, so be cautious when using it.
+1. `convert gpt`
+    - Converts the selected disk's partition style to GPT (GUID Partition Table). GPT is a modern partitioning scheme that allows for larger disk sizes, more partitions, and better data integrity features compared to the older MBR (Master Boot Record) style.
+1. `create partition primary format quick fs=ntfs`
+    - Creates a new primary partition on the selected disk, formats it with the NTFS file system using a quick format. The `quick` parameter speeds up the formatting process by not checking for bad sectors. The NTFS file system is commonly used in Windows for better performance, security, and support for large file sizes.
+1. `assign`
+    - Assigns the next available drive letter to the formatted partition, allowing you to access it through File Explorer.
+1. `exit`
+    - Exits the Diskpart command-line utility, returning you to the regular Command Prompt or terminal.
+> These commands, when used in sequence, convert a disk to GPT, create and format a new primary partition with NTFS, and assign a drive letter to make it usable for storing data or installing an operating system. Keep in mind that "clean" and "convert" commands will erase all data on the disk, so be sure to back up any important data before executing them.
