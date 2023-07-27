@@ -97,6 +97,8 @@ Next class you will work with Windows command line tools and learn how to intera
 
 ## Notes
 
+### Type in `diskmgmt.msc` then click "OK" to open Disk Management from the Run app.
+
 ### Diskpart
 
 #### Type the commands below, pressing Enter after every line. This will initialize the chosen disk to MBR or GPT.
