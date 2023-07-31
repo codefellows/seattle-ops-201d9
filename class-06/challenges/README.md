@@ -1,5 +1,7 @@
 # Ops Challenge - Conditionals
 
+## [Hexx's Replit Demo from Lecture](https://replit.com/@HexxKing1/Bash-Conditionals-Demo#main.sh)
+
 ## Overview
 
 In Bash, conditionals are used to make decisions and control the flow of a script based on certain conditions. In Bash, `if`, `else`, and `elif` are used for implementing conditional logic. They allow you to make decisions in your script based on certain conditions.

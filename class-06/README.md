@@ -82,7 +82,7 @@ Next class, we'll learn about OS upgrades and how to use Powershell to establish
 ## Notes
 
 ## CompTIA ITF+ Practice Exam
-- ![CompTIA ITF+ Practice Q's](./compTIA-practice.pdf)
+- [CompTIA ITF+ Practice Q's](./compTIA-practice.pdf)
 
 ## Feedback Overview
 - 3 out of 6 students turned in the Feedback: Week 1 assignment
