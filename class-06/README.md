@@ -77,6 +77,7 @@ Next class, we'll learn about OS upgrades and how to use Powershell to establish
 
 - [IANA Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml){:target="blank"}
 - [Wikipedia, Internet Assigned Numbers Authority](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority){:target="blank"}
+- TechRadar did a [review](https://www.techradar.com/reviews/windows-defender) in Q4 2020 of Microsoft Defender.
 
 ## Notes
 
