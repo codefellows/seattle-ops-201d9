@@ -33,3 +33,9 @@ Windows administrators should be aware of several key tools: Windows Firewall, W
 - Block network traffic on a specific port or service
 - Operate Windows Defender AV
 - Stop or start a task with Task Manager
+
+
+## Feedback Overview
+- 3 out of 6 students turned in the Feedback: Week 1 assignment
+- 1 person actually wrote feedback 😟
+- "Should have students use the repo more than canvas to look at assignments or help them get used to it"
