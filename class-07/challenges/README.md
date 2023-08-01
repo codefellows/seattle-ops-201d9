@@ -1,5 +1,7 @@
 # Ops Challenge - System Information
 
+## [Hexx's Demo from Lecture](https://github.com/HexxKing/ops_201_challenges/blob/main/system-info.sh)
+
 ## Overview
 
 When working on a new system or troubleshooting performance issues, a quick look at system information is a great starting point. Automating the gathering of useful information can dramatically expedite troubleshooting times for busy support technicians. In todays' challenge you will write a bash script that outputs a report about current system CPU and RAM performance.
