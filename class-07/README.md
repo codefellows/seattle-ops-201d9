@@ -92,3 +92,83 @@ Next class we will perform log analysis and get into the Windows Registry and Co
 - [Microsoft Docs: Invoke-Command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-7.1)
 
 ## Notes
+
+### Powershell
+
+**Open PowerShell**
+- Press the "Windows + X" keys on your keyboard.
+- From the context menu that appears, select "Windows PowerShell (Admin)" to open PowerShell with administrative privileges. Administrative privileges are required for certain tasks, such as managing system settings.
+
+**Get Familiar with the PowerShell Prompt**
+- Once PowerShell opens, you'll see a prompt that looks like this:
+```
+PS C:\Users\YourUsername>
+```
+- The "PS" indicates that it's PowerShell, followed by the current working directory (e.g., "C:\Users\YourUsername"). This is where the commands will be executed.
+
+**Basic Commands**
+- Let's start with a simple command. Type the following and press Enter:
+```
+Get-Process
+```
+- This command will list all the running processes on your system, along with their details.
+
+**Get Help**
+- PowerShell provides extensive help for commands. To get help for a specific command, use the `Get-Help` cmdlet. For example, to get help for the `Get-Process` command, type:
+```
+Get-Help Get-Process
+```
+- The help information will display in the console, explaining the usage and available parameters for the command.
+
+**Getting System Information**
+- You can retrieve various system information using PowerShell. For example:
+```
+Get-ComputerInfo
+```
+- This command will provide detailed information about your computer, such as the OS version, hardware, and more.
+
+**Listing Files and Directories**
+- To list files and directories in the current directory, use the `Get-ChildItem` cmdlet (alias `ls` or `dir`):
+```
+Get-ChildItem
+```
+- This will display the list of files and directories in the current folder.
+
+**Changing Directory**
+- To change to a different directory, use the `Set-Location` cmdlet (alias `cd`):
+```
+Set-Location C:\Path\To\Your\Directory
+```
+
+**Creating a New Folder**
+- To create a new folder, use the `New-Item` cmdlet with the `-ItemType` parameter set to "Directory":
+```
+New-Item -ItemType Directory -Path "C:\Path\To\Your\NewFolder"
+```
+
+**Running Executables**
+- You can run executables using PowerShell. For example, to open Notepad, type:
+```
+Start-Process notepad.exe
+```
+
+**Stopping Processes**
+- You can stop a running process using the `Stop-Process` cmdlet. First, get the process ID using `Get-Process`, and then stop the process using its ID:
+```
+$process = Get-Process -Name "ProcessName"
+Stop-Process -Id $process.Id
+```
+
+**PowerShell Variables**
+- You can create and use variables in PowerShell. For example, to store a number in a variable and perform some calculations:
+```
+$number = 42
+$result = $number * 2
+Write-Host "Result: $result"
+```
+
+**PowerShell Scripts**
+- You can create and run PowerShell scripts to automate tasks. Create a new text file with a `.ps1` extension and write your PowerShell commands inside. Save the file, then open PowerShell, navigate to the file location, and run the script using the `.\` notation:
+```
+.\YourScript.ps1
+```
