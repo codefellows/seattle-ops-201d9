@@ -94,6 +94,7 @@ Next class we will perform log analysis and get into the Windows Registry and Co
 ## Notes
 
 ### Powershell
+PowerShell is a powerful command-line shell and scripting language designed for Windows systems. It allows you to interact with the operating system, manage system configurations, automate tasks, and perform various administrative tasks.
 
 **Open PowerShell**
 - Press the "Windows + X" keys on your keyboard.
@@ -172,3 +173,39 @@ Write-Host "Result: $result"
 ```
 .\YourScript.ps1
 ```
+
+### `Invoke-Command`
+The `Invoke-Command` cmdlet in PowerShell allows you to run commands or scripts on remote computers. It is a powerful tool for remote management and automation, enabling you to execute PowerShell commands on one or multiple remote machines without needing to log in to each one individually. This cmdlet is particularly useful for administrators managing multiple systems in a networked environment.
+
+Here's an explanation of the main aspects of the `Invoke-Command` cmdlet:
+
+**Syntax:**
+```
+Invoke-Command [-ScriptBlock] <ScriptBlock> [-ComputerName] <String[]> [-Credential <PSCredential>]
+```
+
+**Parameters:**
+- `ScriptBlock`: This is the mandatory parameter that defines the script or command that you want to run on the remote computer. It is specified as a script block, enclosed within curly braces `{}`. The commands inside the script block will be executed remotely.
+  
+- `ComputerName`: This parameter specifies the remote computer or a list of remote computers on which the script block will be executed. You can provide a single computer name as a string or an array of computer names.
+
+- `Credential`: This optional parameter allows you to specify the credentials of a user account with sufficient privileges to run the command on the remote computer. If not provided, the current user's credentials will be used.
+
+**Example:**
+```powershell
+Invoke-Command -ComputerName "Server01" -Credential "Domain01\AdminUser" -ScriptBlock {
+    Get-Process
+}
+```
+
+**Explanation:**
+In this example, the `Invoke-Command` cmdlet connects to "Server01" using the specified credentials and runs the `Get-Process` cmdlet on the remote machine. The results of the `Get-Process` cmdlet execution on "Server01" are then returned to the local computer.
+
+**Additional Notes:**
+- If you want to run the command on multiple remote computers simultaneously, you can provide an array of computer names to the `ComputerName` parameter.
+
+- The `Invoke-Command` cmdlet also supports using session objects created by the `New-PSSession` cmdlet to run commands on remote computers. This allows you to establish a persistent connection to a remote machine, reducing the overhead of establishing a new connection each time.
+
+- When using `Invoke-Command`, make sure the target computers have PowerShell remoting enabled. PowerShell remoting uses the WS-Management protocol (WinRM) to execute commands remotely. By default, newer versions of Windows have PowerShell remoting enabled, but you may need to configure it for older systems.
+
+- If you encounter issues with remote execution, verify that the appropriate firewall rules and permissions are set up to allow PowerShell remoting between the machines.
