@@ -108,7 +108,7 @@ PS C:\Users\YourUsername>
 - The "PS" indicates that it's PowerShell, followed by the current working directory (e.g., "C:\Users\YourUsername"). This is where the commands will be executed.
 
 **Basic Commands**
-- Let's start with a simple command. Type the following and press Enter:
+- Type the following and press Enter:
 ```
 Get-Process
 ```
@@ -122,7 +122,7 @@ Get-Help Get-Process
 - The help information will display in the console, explaining the usage and available parameters for the command.
 
 **Getting System Information**
-- You can retrieve various system information using PowerShell. For example:
+- You can retrieve various system information using PowerShell. 
 ```
 Get-ComputerInfo
 ```
@@ -203,9 +203,6 @@ In this example, the `Invoke-Command` cmdlet connects to "Server01" using the sp
 
 **Additional Notes:**
 - If you want to run the command on multiple remote computers simultaneously, you can provide an array of computer names to the `ComputerName` parameter.
-
 - The `Invoke-Command` cmdlet also supports using session objects created by the `New-PSSession` cmdlet to run commands on remote computers. This allows you to establish a persistent connection to a remote machine, reducing the overhead of establishing a new connection each time.
-
 - When using `Invoke-Command`, make sure the target computers have PowerShell remoting enabled. PowerShell remoting uses the WS-Management protocol (WinRM) to execute commands remotely. By default, newer versions of Windows have PowerShell remoting enabled, but you may need to configure it for older systems.
-
 - If you encounter issues with remote execution, verify that the appropriate firewall rules and permissions are set up to allow PowerShell remoting between the machines.
