@@ -8,11 +8,13 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 [Should You Learn Powershell?](https://techthoughts.info/ps1-should-you-learn-powershell/){:target="_blank"}
 
-<!-- Mix it up! Create the questions with pointed answers, fill in the blank, or opinion/open ended -->
-
 [Who needs malware? IBM says most hackers just Powershell through boxes now, leaving little in the way of footprints](https://www.theregister.com/2019/02/26/malware_ibm_powershell/){:target="_blank"}
 
-<!-- Mix it up! Create the questions with pointed answers, fill in the blank, or opinion/open ended -->
+1. What is the difference between Bash and PowerShell?
+1. In what scenarios or environments can you use PowerShell? Name some major platforms where PowerShell is supported.
+1. List at least three reasons why learning PowerShell could be beneficial for your career and environment.
+1. How can PowerShell's automation capabilities improve efficiency and reduce manual errors?
+1. Think about a situation where you might use PowerShell in your everyday life or job. How could PowerShell help you accomplish a specific task or solve a problem?
 
 ## Videos
 
