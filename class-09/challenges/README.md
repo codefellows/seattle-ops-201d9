@@ -65,6 +65,34 @@ By default, variables have a script scope. To create a variable with a global sc
 $global:globalVariable = "This is a global variable."
 ```
 
+## Pipe Operator in Powershell
+
+In PowerShell, the pipe symbol `|` is known as the "pipe" operator, and it is used to pass the output of one cmdlet or command as input to another cmdlet or command. It allows you to chain multiple commands together, creating a pipeline of data processing.
+
+The basic syntax of the pipe operator is:
+
+```powershell
+Command-1 | Command-2
+```
+
+Here's how the pipe operator works:
+
+1. The command or cmdlet on the left side of the pipe operator (`Command-1`) produces some output, which could be objects, text, or other data.
+
+2. The pipe operator (`|`) takes the output from `Command-1` and sends it as input to the command or cmdlet on the right side (`Command-2`).
+
+3. `Command-2` then processes the input received from `Command-1` and produces its own output, which can be passed to another command using another pipe or displayed as the final output of the PowerShell statement.
+
+This concept of piping is one of the powerful features of PowerShell that enables you to chain commands together, creating complex and efficient data processing workflows. It allows you to perform a series of operations on data without the need to store intermediate results in variables.
+
+For example:
+
+```powershell
+Get-Process | Where-Object { $_.WorkingSet -gt 100MB } | Sort-Object -Property CPU -Descending | Select-Object -First 5
+```
+
+In this example, we first retrieve all the processes using `Get-Process`. The output is then passed to the `Where-Object` cmdlet to filter processes with a working set size greater than 100 MB. The resulting processes are then sorted by CPU usage in descending order using `Sort-Object`, and finally, the first five processes are selected using `Select-Object`. The entire operation is performed in a single line using the pipe operator, making the code concise and easy to read.
+
 ## `Get-Date`
 
 `Get-Date` is a PowerShell cmdlet used to retrieve the current date and time. It allows you to access the system's current date and time and perform various operations related to date and time manipulation.
