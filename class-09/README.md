@@ -94,9 +94,9 @@ Next class will focus on imaging, backups, and recovery methodologies.
 - Support and operate **Thunderbird Mail Client**
 - Configure Thunderbird email client for a new user
 
-<!-- ## Helpful Resources
+## Helpful Resources
 
-- [Cheat Sheet](){:target="blank"} -->
+- [Ray Tomlinson](https://en.wikipedia.org/wiki/Ray_Tomlinson) is credited as the inventor of email.
 
 ## Notes
 
