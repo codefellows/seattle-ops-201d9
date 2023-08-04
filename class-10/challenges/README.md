@@ -4,11 +4,84 @@
 
 In today's Ops Challenge you will analyze, initialize, and terminate processes (programs) using Powershell commands. As you practice these commands and gain skill with Powershell scripting, consider both the administrator utility value and cyber attacker utility value of knowing such commands.
 
+## `Get-Process`
+
+`Get-Process` is a built-in PowerShell cmdlet (command-let) that retrieves information about processes running on your Windows computer. It allows you to view details about currently running processes, such as their names, IDs, CPU usage, memory consumption, and more. This cmdlet is particularly useful for monitoring system performance, troubleshooting issues, and managing running applications.
+
+Review `Get-Process` from [Class 07](../../class-07/README.md).
+
+## `Start-Process`
+
+`Start-Process` is another built-in PowerShell cmdlet that allows you to launch external programs, applications, or scripts from within a PowerShell session. It is essentially used to start a new process (application) on your computer, similar to double-clicking an executable file or running a program from the command line.
+
+**Parameters**
+
+- `-FilePath <String>`: Specifies the path to the executable file or script to be started.
+- `-ArgumentList <String[]>`: Provides additional arguments or parameters to be passed to the process being started.
+- `-Credential <PSCredential>`: Allows you to run the process with alternative credentials. You can create a PSCredential object using the `Get-Credential` cmdlet.
+- `-WorkingDirectory <String>`: Specifies the working directory for the process.
+- `-LoadUserProfile`: Loads the user profile when starting the process. Useful for certain applications that rely on user-specific settings.
+- `-NoNewWindow`: Starts the process in the same window instead of opening a new window.
+- `-RedirectStandardInput <String>`: Redirects the standard input of the process to the specified file.
+- `-RedirectStandardOutput <String>`: Redirects the standard output of the process to the specified file.
+- `-RedirectStandardError <String>`: Redirects the standard error output of the process to the specified file.
+- `-UseNewEnvironment`: Starts the process with a new, clean environment instead of inheriting the parent environment variables.
+- `-Wait`: Waits for the process to complete before the PowerShell script continues execution.
+- `-NoWait`: Starts the process and immediately returns control to the PowerShell script without waiting for the process to complete.
+- `-WindowStyle <ProcessWindowStyle>`: Specifies the window style for the process. Possible values are `Normal`, `Hidden`, `Minimized`, and `Maximized`.
+- `-PassThru`: Returns the `System.Diagnostics.Process` object representing the started process.
+
+Here's how you can use `Start-Process` in PowerShell:
+
+**Basic usage**
+
+To launch an application using `Start-Process`, simply provide the path to the executable file as the argument. For example, to open Notepad, you can use:
+
+```powershell
+Start-Process notepad.exe
+```
+
+**Specifying arguments**
+
+Some applications might require additional arguments or parameters to be passed when launching. You can do this using the `-ArgumentList` parameter. For example, to open a specific text file with Notepad, you can use:
+
+```powershell
+Start-Process notepad.exe -ArgumentList "C:\path\to\your\file.txt"
+```
+
+**Working directory**
+
+You can specify the working directory for the process using the `-WorkingDirectory` parameter. This is helpful when an application relies on files located in a specific folder.
+
+```powershell
+Start-Process notepad.exe -WorkingDirectory "C:\your\working\directory"
+```
+
+**Process window style**
+
+You can control the appearance of the process window using the `-WindowStyle` parameter. For example, you can hide the window, maximize it, or run it normally.
+
+```powershell
+Start-Process notepad.exe -WindowStyle Maximized
+```
+
+**Redirecting output**
+
+By default, `Start-Process` does not capture the output of the launched process in the PowerShell session. However, you can use the `-NoNewWindow` parameter with redirection operators (e.g., `>` or `>>`) to capture the output to a file.
+
+```powershell
+Start-Process notepad.exe -NoNewWindow -RedirectStandardOutput "C:\output.txt"
+```
+
+**Asynchronously starting a process**
+
+By default, `Start-Process` waits for the launched process to finish before returning control to the PowerShell session. If you want to start the process and continue with other tasks without waiting, you can use the `-NoWait` parameter.
+
+```powershell
+Start-Process notepad.exe -NoWait
+```
+
 ## References and Resources
 
 - [Microsoft Powershell Management](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/?view=powershell-5.1){:target="_blank"}
    - Microsoft's official documentation will be your primary go-to resource for most Powershell assignments. Here you can look up useful syntax guides and examples along with relevant explanations.
-
-## Demo
-
-Ref. DEMO.md
