@@ -81,6 +81,26 @@ By default, `Start-Process` waits for the launched process to finish before retu
 Start-Process notepad.exe -NoWait
 ```
 
+## 'Run Selection' in PowerShell ISE (Integrated Scripting Environment)
+
+The 'Run Selection' option allows you to execute a specific portion of your PowerShell script without running the entire script. This feature is useful when you want to test a small section of your code or isolate a particular part for debugging purposes. PowerShell ISE is a graphical user interface (GUI) tool that provides a more convenient environment for writing, testing, and debugging PowerShell scripts.
+
+Here's how to use the 'Run Selection' option in PowerShell ISE:
+
+1. Launch PowerShell ISE on your Windows computer. You can find it by searching for "PowerShell ISE" in the Start menu or by typing `powershell_ise` in the Run dialog.
+
+2. Create a new script or load an existing one into the editor.
+
+3. Highlight the portion of the code that you want to execute. You can use the mouse to select the text or use keyboard shortcuts like Ctrl+A to select all or Shift+Arrow keys to make a selection.
+
+4. Once you have the desired code selected, you can either right-click on the selected text and choose 'Run Selection' from the context menu, or you can use the keyboard shortcut F8.
+
+5. The selected code will be executed in the PowerShell console pane at the bottom of the ISE window. You'll see the output of the executed code displayed in the console.
+
+It's important to note that when you use 'Run Selection,' only the selected part of the script is executed, and any variables or functions defined outside that selection will not be accessible within it. This can be both advantageous and limiting depending on your use case.
+
+Additionally, the 'Run Selection' option is handy when you want to test and debug a specific section of a larger script or when you are experimenting with different PowerShell commands to see their output without running the entire script each time.
+
 ## References and Resources
 
 - [Microsoft Powershell Management](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/?view=powershell-5.1){:target="_blank"}
