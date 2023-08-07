@@ -101,7 +101,8 @@ In the next class, we'll be deploying a pfSense router/firewall as a VM in Virtu
 - "That kind of setup; submit assignment, get feedback, and getting the chance to improve your grade goes hand in hand with urging us to make mistakes, try different things, and be inquisitive."
 - "getting personal suggestions on where the instructional staff likes to get their information from, or if there is a particular learning exercise that has really helped them, or podcast/YouTube recommendations; I keep a list of everything I want to check out and whenever time allows for it, I enjoy following up on them."
 - "Course is certainly not for beginner. You got to have some kind of extensive knowledge in tech or work three time harder to be successful"
-  - 201 is the foundational course. 102 is the beginner course.
+  - 201 is the foundational course. 
+  - 101 and 102 are for beginners. 
 - Found least helpful: "ops challenges"
 - Rated the course a 3 but didn't give any feedback on how we can bring that 3 up to a 9 or 10.
 - Concerns: The amount of time to "prep for the CompTIA ITF+ exam. it doesn't really feel like enough time."
