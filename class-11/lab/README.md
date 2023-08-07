@@ -33,10 +33,13 @@ Credentials:
 ### Part 1: Staging
 
 - Download [ops201-class11.ova](https://codefellows.github.io/ops-201-guide/curriculum/#course-schedule){:target="_blank"} and import it into VirtualBox.
+  - Make sure that the VM is set to NAT (you will likely experience a network error message if you leave it set to bridged).
 - Clone a Windows 10 starter VM to create a VM that you can afford to break/delete.
 - Make sure you have a Windows 10 .iso file on hand.
   - [Download a new copy if need to.](https://codefellows.github.io/ops-201-guide/curriculum/#course-schedule){:target="_blank"}
 - Download [Darik's Boot and Nuke (DBAN) ISO file](https://sourceforge.net/projects/dban/files/dban/dban-2.3.0/dban-2.3.0_i586.iso/download){:target="_blank"}.
+- To avoid potential problems while running DBAN, try to have ~40gb of free space on your lab computer.
+  - (WHY: we use dynamically allocated disks with out VMs to save space on our lab computers, so a VM with a 50gb virtual disk but only 15gb of data written to the drive will only use 15gb of the host's disk space. However, DBAN securely wipes a drive by writing random characters to the disk, thus it will attempt to write gibberish to the _entire_ disk, causing the VM to temporarily use its entire allotted space. If there is not sufficient space remaining on the host then the lab computer may crash in spectacular fashion.)
 
 For each task below, include in your submission a text description of operations performed and any relevant screenshots as indicated.
 
@@ -76,7 +79,7 @@ For your submission, describe how successful this operation was.
 ### Part 4: Secure Data Disposal
 
 In your disposable Windows 10 VM:
-  - Boot the lab PC into the [Darik's Boot and Nuke (DBAN) ISO file](https://sourceforge.net/projects/dban/files/dban/dban-2.3.0/dban-2.3.0_i586.iso/download){:target="_blank"}.
+  - Attach [Darik's Boot and Nuke (DBAN) ISO file](https://sourceforge.net/projects/dban/files/dban/dban-2.3.0/dban-2.3.0_i586.iso/download){:target="_blank"} to the VM's optical drive, check that the boot order is set appropriately, and boot into DBAN.
   - Select interactive mode.
   - Type `M` for Wipe Method choice menu and select Quick Erase.
   - Press `SPACE` to select the Wipe Method. In the Disks and Partitions menu arrow to the drive you wish to securely erase and select with `SPACE`.
