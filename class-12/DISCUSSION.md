@@ -8,4 +8,8 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 [Introduction to pfSense](https://turbofuture.com/computers/Introduction-to-pfSense-An-Open-Source-Firewall-and-Router-Platform){:target="_blank"}
 
-<!-- Mix it up! Create the questions with pointed answers, fill in the blank, or opinion/open ended -->
+1. List some popular uses for pfSense.
+1. What are the hardware requirements for setting up a pfSense router?
+1. Where can you find support options for pfSense users?
+1. How can you access the automatic configuration backup utility in pfSense?
+1. Reflect on the importance of cultural awareness in the field of network security and administration. How might cultural differences influence decision-making and problem-solving when dealing with virtual routers and firewalls, like pfSense, in a global context?
