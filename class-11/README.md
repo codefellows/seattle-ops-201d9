@@ -1,4 +1,4 @@
-# Class 10
+# Class 11
 
 ## Class Outline
 
@@ -6,89 +6,69 @@
 1. Review
 1. Lecture
 1. Demo
-1. Lab Prep
+1. Lab
 
 ## Overview
 
-As a service desk technician, it's important to be prepared for when computer systems inevitably malfunction and data is lost. Today you will use Windows Recovery and Veeam to perform imaging, backup, and system recovery operations on a Windows 10 VM. 
+Computer users make mistakes. Sometimes, those mistakes involve losing access to precious company data. As an Ops professional, you'll need to know how to restore deleted or corrupted data files.
 
-You'll get to practice using Microsoft OneDrive to sync a local directory against the Office 365 Cloud. You'll also explore VirtualBox backup capabilities including .ova export and snapshots.
+Today you'll learn some useful data forensics tools and operations, including how to repair corrupt data and how to permanently delete data. Skills learned today can be applied to both IT systems availability and security forensics contexts.
 
 ## How does this topic fit?
 
 **Where we've been**:
-In the previous class we used a SOP for guidance to setup an employee workstation in a corporate environment.
+In the previous class we learned about backups and recoveries, as well as working with system images.
 
 **What are we focusing on today**:
-Today, we'll be working with backups, recoveries and system images.
+Today, we'll be looking at what happens when data gets damaged, and how we can use tools that repair data. We'll also practice data recovery and secure erasure.
 
 **Where we're headed**:
-Next class will focus on what happens when data gets damaged, and how we can use tools that repair data. We'll also practice data recovery and secure erasure.
+In the next class, we'll be deploying a pfSense router/firewall as a VM in VirtualBox. This will open up future opportunities to practice computer networking using the lab kit PC.
 
-## Imaging, Backup, and Recovery
+## Data Restoration, Startup Repair, and Secure Disposal
 
 ### Why
-- Imaging, backup, and recovery safeguard against accidental data loss, hardware failures, software corruption, cyberattacks, and other unforeseen events. By regularly creating backups and images of important data and systems, organizations can minimize the risk of permanent data loss and maintain business operations smoothly.
-- In the event of a catastrophic incident like natural disasters, hardware failures, or cyberattacks, having reliable backups and images is vital for a swift and efficient recovery process. IT teams can restore systems, applications, and data to a pre-disaster state, minimizing downtime and ensuring business continuity.
-- When systems encounter errors or fail to function correctly, having a backup or image allows IT professionals to restore the entire system or specific components to a previous state, where it was known to be stable and functional.
-- Imaging technology allows IT administrators to create standardized system images that can be deployed across multiple devices or workstations. This streamlines the setup and configuration of new hardware, saving time and effort in the deployment process.
-- In case of system failures or data loss, recovering from backups or images is generally quicker and more cost-effective than rebuilding systems from scratch or attempting manual data recovery.
-- Many industries and organizations are subject to specific regulations regarding data protection and retention. Regular backups and imaging help meet compliance requirements and ensure data is retained for the necessary duration.
+- People can unintentionally delete files or suffer data loss due to hardware or software failures.
+- System crashes, power outages, or software bugs can lead to data corruption or loss.
+- In the event of a cyberattack or malware infection, data may be compromised, and restoring it becomes necessary.
+- In case of natural disasters, hardware failure, or other catastrophic events, data restoration is critical for business continuity.
+- The operating system may fail to start due to corrupted system files, missing boot configuration, or incompatible drivers.
+- Errors or conflicts during the startup process can cause the system to crash or become unstable.
+- Startup repair can assist in diagnosing and resolving blue screen errors that occur during boot-up.
+- Computers may get stuck in a continuous bootloop, unable to start successfully.
+- Many data protection regulations (e.g., GDPR, HIPAA) require organizations to ensure proper disposal of sensitive information to protect user privacy.
+- Discarding storage devices without proper data erasure could lead to data leaks if the media ends up in the wrong hands.
+- Improper disposal of business data could make a company vulnerable to corporate espionage or unauthorized access.
 
 ### What
-- Imaging: The process of creating a complete and exact copy (image) of a computer system, including the operating system, applications, configurations, and data.
-- Backup: A copy of data and/or system files that are created and stored separately from the original source to be used for recovery purposes in case of data loss or system failure.
-- Recovery: The process of restoring data, systems, or applications to a functional state after a failure or disaster.
-- Disaster Recovery (DR): The process and procedures that an organization follows to recover critical technology infrastructure and operations after a natural or man-made disaster.
-- Business Continuity: The ability of an organization to continue essential business operations and services during and after a disaster or disruption.
-- Data Loss: The unintentional or accidental loss of data due to human error, hardware failure, software corruption, or cyberattacks.
-- Incremental Backup: A type of backup that only stores the data that has changed since the last backup, reducing storage requirements and backup time.
-- Full Backup: A complete backup that copies all data and files in a system, providing a baseline for incremental backups.
-- Differential Backup: A type of backup that stores the data that has changed since the last full backup, providing a balance between full and incremental backups.
-- Recovery Point Objective (RPO): The maximum amount of data loss an organization can tolerate in the event of a disaster, measured in time.
-- Recovery Time Objective (RTO): The maximum acceptable downtime for restoring systems and services after a disaster, measured in time.
-- Bare-Metal Restore: The process of restoring a complete system, including the operating system, applications, configurations, and data, on a new or repaired hardware.
-- Redundancy: The duplication of critical components or systems to ensure continued operations if one component or system fails.
-- High Availability: A system design that aims to minimize downtime by providing redundant components and failover mechanisms.
-- Data Archiving: The long-term storage of data that is no longer actively used but may be required for compliance or historical purposes.
-- Cloud Backup: Storing backups and images on cloud-based storage services, providing offsite storage and accessibility.
-- Local Backup: Storing backups and images on local storage devices, such as external hard drives or network-attached storage (NAS) devices.
-- Backup Schedule: A predetermined plan for when and how backups are performed, including the frequency and type of backups.
+- Backup: A copy of data created as a precautionary measure to restore information in case of data loss.
+- Recovery Point Objective (RPO): The maximum acceptable time period during which data might be lost due to a disaster or system failure.
+- Recovery Time Objective (RTO): The target time within which a system or data must be restored after a disaster or failure occurs.
+- File System: The method and data structure used by an operating system to organize and store files on a storage device.
+- Disk Imaging: Creating a complete replica (image) of a storage device, including the operating system and data, for backup and recovery purposes.
+- Data Correlation: Analyzing and identifying relationships between different datasets or pieces of information.
+- Bootloader: A program that manages the boot process of an operating system, loading the necessary components to start the system.
+- Boot Configuration Data (BCD): A database containing boot-related information, used by Windows operating systems.
+- System Restore: A feature that allows users to revert the computer's state to a previous point in time to fix issues without affecting personal files.
+- Safe Mode: A diagnostic startup mode in which only essential drivers and services are loaded, often used for troubleshooting.
+- Blue Screen of Death (BSOD): An error screen displayed on Windows operating systems when a critical system error occurs.
+- Firmware: Software embedded in hardware devices, responsible for their basic functionality and communication with the operating system.
+- Data Sanitization: The process of permanently erasing data from storage devices to make it unrecoverable.
+- Degaussing: A method of erasing data from magnetic storage media using a powerful magnetic field.
+- Physical Destruction: Physically damaging storage devices, rendering them unusable and data unrecoverable.
+- Data Wiping: The process of overwriting data on a storage device multiple times to ensure its complete removal.
+- Hard Drive Shredding: The destruction of a hard drive by shredding it into small pieces, making data recovery impossible.
+- Regulatory Compliance: Adherence to specific laws and regulations related to data privacy and secure data disposal.
 
 ### How
-- Use Veeam to perform a file level backup of your personal files
-- Create a full, current-state clone of a VM
-- Explore the "Logs" console in VirtualBox
-- Backup files to OneDrive
+- Repair a user's MBR from a pre-startup console
+- Restore deleted files on a user's computer
+- Securely erase a (virtual) hard drive using DBAN
 
-### Experimentation and Discovery Ideas
-- Explore some of VirtualBox's advanced features and settings.
-  - Clone VM
-    - The Clone VM feature in VirtualBox allows you to create an exact duplicate of an existing virtual machine (VM). This is useful when you want to replicate a VM configuration without having to go through the entire setup process again. The cloned VM will have the same virtual hardware, disk images, and settings as the original VM but will be given a new unique identifier.
-  - Remote Display
-    - VirtualBox's Remote Display feature enables you to access and control a VM running on one host from another computer on the same network. This is particularly useful for remote administration, testing, or providing access to VMs on headless servers.
-  - Configure VM Networking
-    - VirtualBox offers various networking modes for VMs. You can configure the networking settings to control how the VM interacts with the external network and other VMs. 
-      - NAT
-        - The VM can access the external network using the host's IP address.
-      - Bridged
-        - The VM appears as a separate device on the network, just like a physical machine.
-      - Internal
-        - The VM can communicate only with other VMs on the same host using an internal network.
-      - Host-only
-        - The VM can communicate only with the host system.
-      - Generic Driver
-        - This allows you to use third-party networking solutions.
-  - Storage Management
-    - VirtualBox allows you to manage storage for VMs by adding, removing, or resizing virtual disks. You can attach physical disks, create virtual disk images, and set storage controllers to control the disk access behavior. This flexibility lets you fine-tune the VM's storage performance and capacity.
-  - USB Device Support
-    - With VirtualBox's USB Device Support, you can use USB devices connected to the host system directly within the VM. This enables you to access USB peripherals such as flash drives, external hard drives, printers, and more from inside the VM.
-  - Advanced CPU and Memory Settings
-    - VirtualBox provides advanced settings to configure the CPU and memory allocation for VMs. You can adjust the number of CPU cores allocated to a VM and configure CPU execution caps. Additionally, you can control the base memory (RAM) assigned to a VM, as well as enable options like nested paging and PAE/NX (Physical Address Extension/No-Execute).
-  - Guest Additions
-    - Guest Additions are special software packages that enhance the performance and functionality of the VM's guest operating system. When you install Guest Additions in a VM, it enables features like seamless window integration, better graphics support, shared folders, time synchronization, and more.
-  - Performance Monitoring
-    - VirtualBox provides performance monitoring features to track the resource usage of VMs. You can monitor metrics such as CPU usage, memory consumption, disk I/O, and network traffic for each VM. This helps in identifying bottlenecks and optimizing the VM's performance.
+<!-- ### Experimentation and Discovery Ideas
+  - Provide some ideas here for how the instructor can be interactive with the students
+  - Can this be built using the Socratic method?
+  - Can we use breakout or small group sessions -->
 
 ## Learning Objectives
 
@@ -96,25 +76,34 @@ Next class will focus on what happens when data gets damaged, and how we can use
 
 #### Describe and Define
 
-- Baseline
-- Backup
-- Recovery
-- System Image
-- System Restore
-- OVA
-- Snapshot
+- Data file corruption
+- Data repair operations in Windows OS
+- Data recovery tools
+- Data disposal tools and best practices
 
 #### Execute
 
-- Create snapshots in VirtualBox
-- Export and import OVA system images in VirtualBox
-- Use imaging, backup and recovery tool Veeam
-- Operate Windows Recovery
+- Repair corrupt Windows OS system files
+- Repair corrupt boot sector data
+- Access the command line terminal from outside of the Windows OS
+- Perform data erasure using DBAN
+- Recover "deleted" data
 
 ## Helpful Resources
 
-- [Imaging, backup, and recovery - CompTIA Security+ SY0-401: 2.4: Professor Messer](https://www.professormesser.com/security-plus/sy0-401/capturing-system-images/){:target="blank"}
-- [Installing Operating Systems – CompTIA A+ 220-1002 – 1.3: Professor Messer](https://www.professormesser.com/free-a-plus-training/220-1002/installing-operating-systems/){:target="blank"}
-- [Examples of enterprise backup software providers](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgo.veeam.com%2Frs%2Fveeam%2Fimages%2Fgartner_quadrant__big.png&f=1&nofb=1){:target="blank"}
+- [EaseUS Recovery Tool](https://www.easeus.com/datarecoverywizard/free-data-recovery-software.htm){:target="_blank"}
+- [Darik's Boot and Nuke (DBAN) ISO file](https://sourceforge.net/projects/dban/files/dban/dban-2.3.0/dban-2.3.0_i586.iso/download){:target="_blank"}
 
 ## Notes
+
+## Feedback Overview
+- "The class repo was actually something I had been underutilizing until recently but I am thankful that we kept being pushed to go look at and use it."
+- "That kind of setup; submit assignment, get feedback, and getting the chance to improve your grade goes hand in hand with urging us to make mistakes, try different things, and be inquisitive."
+- "getting personal suggestions on where the instructional staff likes to get their information from, or if there is a particular learning exercise that has really helped them, or podcast/YouTube recommendations; I keep a list of everything I want to check out and whenever time allows for it, I enjoy following up on them."
+- "Course is certainly not for beginner. You got to have some kind of extensive knowledge in tech or work three time harder to be successful"
+  - 201 is the foundational course. 102 is the beginner course.
+- Found least helpful: "ops challenges"
+- Rated the course a 3 but didn't give any feedback on how we can bring that 3 up to a 9 or 10.
+- Concerns: The amount of time to "prep for the CompTIA ITF+ exam. it doesn't really feel like enough time."
+- "cheat sheet for...coding like shell and python would be helpful."
+- Found least helpful: "Alot of guide provided from the instructor"
