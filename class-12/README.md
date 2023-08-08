@@ -134,6 +134,43 @@ Next class will delve into how computer technicians detect malware, restore oper
     - Username: admin 
     - password: pfsense
 
+### OSI Model
+
+The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a communication or network system into seven distinct layers. It was developed by the International Organization for Standardization (ISO) to guide the design, understanding, and interoperability of networking protocols and systems. Each layer of the OSI model has a specific role and responsibility in the process of transmitting data between devices on a network. 
+
+The OSI model serves as a foundation for understanding networking concepts and protocols. While real-world networking protocols may not adhere exactly to the OSI layers, the model's structure provides a valuable framework for categorizing and comprehending the complexities of network communication.
+
+Here's an overview of the seven layers:
+
+**Layer 1: Physical Layer**
+
+The Physical Layer deals with the actual physical transmission of data over the network medium. It encompasses aspects like electrical signals, cables, connectors, and the physical characteristics of devices. It defines the hardware-related aspects of networking, such as transmission rates, voltage levels, and signal modulation.
+
+**Layer 2: Data Link Layer**
+
+The Data Link Layer provides error detection and correction within the physical layer. It's responsible for establishing a reliable link between directly connected nodes, ensuring that data is properly framed, addressed, and transmitted. This layer includes sublayers: the Logical Link Control (LLC) sublayer handles flow control and error checking, while the Media Access Control (MAC) sublayer manages access to the physical medium.
+
+**Layer 3: Network Layer**
+
+The Network Layer is responsible for routing data packets between devices in different networks. It handles logical addressing, subnetting, and routing decisions to determine the optimal path for data transmission. IP addresses operate at this layer, and routers are key devices that operate here.
+
+**Layer 4: Transport Layer**
+
+The Transport Layer ensures end-to-end communication reliability and manages data segmentation, reassembly, flow control, and error correction. It offers two primary protocols: Transmission Control Protocol (TCP), which provides reliable and connection-oriented communication, and User Datagram Protocol (UDP), which offers faster but less reliable communication.
+
+**Layer 5: Session Layer**
+
+The Session Layer manages the establishment, maintenance, and termination of communication sessions between devices. It also handles synchronization and data checkpointing, ensuring that if a session is disrupted, it can be resumed without data loss.
+
+**Layer 6: Presentation Layer**
+
+The Presentation Layer deals with data translation, encryption, compression, and formatting to ensure that data sent by one application can be properly understood by another, regardless of differences in data formats or encoding.
+
+**Layer 7: Application Layer**
+
+The Application Layer is the topmost layer that interacts directly with end-user applications. It provides a platform for applications to communicate with each other over the network. Common application-layer protocols include HTTP, SMTP, FTP, and more.
+
+
 ### Cultural Reading Questions
 "Also the readings..All of them end with some sort of culture reference. I don't know how cultures would react in certain situations. I was giving a canned answer now its getting more and more detail which I dont really know how to respond."
 
