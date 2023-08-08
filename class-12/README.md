@@ -92,6 +92,48 @@ Next class will delve into how computer technicians detect malware, restore oper
 
 ## Notes
 
+### pfSense Install Guide
+
+**Download pfSense iso:**
+  - You'll also need to extract it!
+    - "Open with Archive Manager"
+    - Accept defaults 
+
+**VM Settings:**
+  - FreeBSD 64-bit
+  - System / Pointing Device: USB Tablet
+    - This should prevent mouse capture
+- Under "Storage", add the downloaded pfSense ISO as a new Optical Drive.
+  - Network:
+    - Adapter 1: Bridged (NAT is also fine)
+    - Adapter 2: Internal Network
+
+**Installation:**
+  - Accept all defaults
+  - Use <space> to select the `ada0 VBOX HARDDISK` drive
+  - Reboot
+  - Turn the machine off to remove the installation ISO from the Optical Drive in the VM Network Settings.
+  - Restart the machine
+
+**Configuration:**
+  - Set interface IP address
+    - Choose LAN
+    - Enter LAN IP (you can change it or keep it the same)
+    - Subnet bit count: 24
+    - Do not need upstream gateway address
+    - No IPv6
+    - Enable DHCP
+      - Start address: * . * . * .100
+      - End address: * . * . * .200
+    - Revert web configurator to HTTP: yes
+
+**Finish**
+  - Export OVA backup
+  - Take a snapshot
+  - Connect a Windows VM to the same Internal Network in order to access the pfSense Web Configurator
+    - Username: admin 
+    - password: pfsense
+
 ### Cultural Reading Questions
 "Also the readings..All of them end with some sort of culture reference. I don't know how cultures would react in certain situations. I was giving a canned answer now its getting more and more detail which I dont really know how to respond."
 
