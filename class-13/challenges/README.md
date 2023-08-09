@@ -4,6 +4,60 @@
 
 Public domain information can be a liability when defending something like a web server against cyber attack. Shell scripts can be useful tools in automating the gathering of useful intelligence about a domain for both offensive and defensive purposes. Today you'll add a new function to your Bash admin tool that fetches domain information for a given input.
 
+## DNS
+
+The Domain Name System (DNS) is a hierarchical and decentralized naming system used to translate human-readable domain names (like "example.com") into IP addresses (like "192.0.2.1"). Computers and devices on the internet communicate using IP addresses, but remembering numerical IP addresses for every website or service is not practical. DNS provides a way to associate meaningful domain names with these numerical addresses, making it easier for people to access resources on the internet.
+
+DNS serves several crucial functions:
+
+**Name Resolution** 
+
+DNS resolves domain names to IP addresses, allowing devices to locate each other on the internet.
+
+**Redundancy** 
+
+DNS operates in a distributed manner, with many interconnected DNS servers worldwide. This redundancy improves reliability and load distribution.
+
+**Caching** 
+
+DNS servers store resolved mappings for a certain period. This caching reduces the need for repeated lookups and improves response times.
+
+**Domain Hierarchy** 
+
+DNS uses a hierarchical structure with different levels, such as top-level domains (TLDs) like ".com," second-level domains (SLDs) like "example," and subdomains like "www."
+
+## Domains
+
+A domain is a user-friendly, human-readable name used to identify a location on the internet. Domains provide a memorable way to access websites, email servers, and other resources. A domain is composed of labels separated by periods (dots), and it follows a right-to-left hierarchy.
+
+For example, in the domain name "www.example.com":
+
+- "com" is the top-level domain (TLD).
+- "example" is the second-level domain (SLD).
+- "www" is a subdomain.
+
+Domains can be categorized into different TLDs, such as generic TLDs like ".com," ".org," ".net," country code TLDs like ".uk," ".jp," and newer TLDs like ".app," ".blog," and more.
+
+Registrants can buy and register domain names through domain registrars for a specific duration, usually annually. Domains must be unique within a TLD, but different TLDs can have overlapping names (e.g., example.com and example.net).
+
+Domains are used for various purposes:
+
+**Websites** 
+
+Domains are associated with web servers to provide a user-friendly URL for websites. For instance, "www.example.com" points to a web server hosting the content for that domain.
+
+**Email** 
+
+Domains are used in email addresses, such as "user@example.com." The domain's mail server handles incoming and outgoing emails.
+
+**Network Resources** 
+
+Domains can be used to identify network resources like servers, printers, and other devices.
+
+**Branding and Identity** 
+
+Domains contribute to branding and online identity, making it easier for users to remember and access a website or service.
+
 ## `whois`
 
 The `whois` command is a utility used to retrieve information about domain names, IP addresses, and various network-related information from domain registration databases and internet registries. It's particularly useful for obtaining details about ownership, registration dates, contact information, and more for domain names.
