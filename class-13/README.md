@@ -80,10 +80,10 @@ In the next class, we'll be discussing how computer technicians detect malware, 
 - Establish SSH (Secure Shell) connectivity to a Linux-based system
 - Operate a Linux-based system via SSH session
 
-<!-- ## Helpful Resources
+## Helpful Resources
 
-- [Cheat Sheet](){:target="blank"}
-- etc. -->
+- [Pizza as a Service](https://www.paulkerrison.co.uk/random/pizza-as-a-service-2-0){:target="blank"}
+- [AWS Architecture Blog: Compute Abstractions on AWS: A Visual Story](https://aws.amazon.com/blogs/architecture/compute-abstractions-on-aws-a-visual-story/){:target="blank"}
 
 ## Notes
 
