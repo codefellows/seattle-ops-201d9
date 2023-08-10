@@ -75,3 +75,7 @@ Use images, diagrams, or GIFs to illustrate how your project works, its interfac
 If applicable, include a section that documents changes, enhancements, and bug fixes in each version of your project.
 
 Remember that clarity, conciseness, and organization are key. Make sure your README is well-structured and easy to read, catering to both newcomers and experienced users. Regularly update the README as your project evolves to provide accurate and up-to-date information.
+
+## Resources
+
+- [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
