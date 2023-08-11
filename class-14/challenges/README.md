@@ -12,7 +12,7 @@ Clearly state the name of your project and provide a brief, concise description 
 
 **Badges**
 
-Use badges to display important information such as build status, code coverage, and license type. Badges provide quick insights into the project's quality and health.
+Use [badges](https://github.com/badges/shields) to display important information such as build status, code coverage, and license type. Badges provide quick insights into the project's quality and health.
 
 **Table of Contents**
 

@@ -87,15 +87,14 @@ In the next class we'll be reviewing what we learned so far, unlocking the final
 
 #### Execute
 
-- Remediate a minor malware infection on a Windows 10 endpoint.
-- Utilize administrator tools to generate additional system information.
-- Communicate findings.
+- Remediate a minor malware infection on a Windows 10 endpoint
+- Utilize administrator tools to generate additional system information
+- Communicate findings
 
 ## Helpful Resources
 
-<!-- If needed, add these here, otherwise delete this section -->
-- [Cheat Sheet](){:target="blank"}
-- etc.
+- [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="blank"}
+- [WinDirStat](https://windirstat.net/){:target="blank"}
 
 ## Notes
 
